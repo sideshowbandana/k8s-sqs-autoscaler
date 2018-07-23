@@ -13,7 +13,7 @@ def setup_logging():
     logger_instance = logging.getLogger('autoscaling')
     logger_instance.addHandler(file_handler)
     logger_instance.addHandler(StreamHandler())
-    level = os.environ['LOGGING_LEVEL'] if os.environ.get('LOGGING_LEVEL') else 'DEBUG'
+    level = os.environ['LOGGING_LEVEL'] if os.environ.get('LOGGING_LEVEL') else 'ERROR'
     logger_instance.setLevel(level)
     return logger_instance
 
